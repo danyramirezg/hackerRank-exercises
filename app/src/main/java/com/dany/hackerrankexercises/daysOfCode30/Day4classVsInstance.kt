@@ -16,18 +16,43 @@ Otherwise, print You are old..
 
  */
 
-class Person(age: Int){
+class Person(age: Int) {
 
-    var age: Int = 0
+    var age: Int
 
-    init{
+    init {
         this.age = age
+        if (age < 0) {
+            println("Age is not valid, setting age to 0.")
+            this.age = 0
+        }
     }
 
-    fun amIOld(){
-        if (age > 18)
+    fun amIOld() {
+        if (age < 13)
+            println("You are young.")
+        else if (age in 13..17)
+            println("You are a teenager.")
+        else
             println("You are old.")
     }
 
+    fun yearPasses() {
+        this.age += 1
+    }
+}
 
+fun main(args: Array<String>) {
+    val t = readLine()?.toInt()
+
+    for (i in 0..t!!) {
+        val age = readLine()?.toInt()
+        val p = age?.let { Person(it) }
+        p?.amIOld()
+        for (j in 0..3) {
+            p?.yearPasses()
+        }
+        p?.amIOld()
+        println("")
+    }
 }
