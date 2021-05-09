@@ -1,0 +1,18 @@
+def main():
+    lines = int(input())
+
+    for i in range(lines):
+        string = input()
+        even_chars = ""
+        odd_chars = ""
+
+        for j in range(len(string)):
+            if j % 2 == 0:
+                even_chars += string[j]
+            else:
+                odd_chars += string[j]
+        print("{} {}".format(even_chars, odd_chars))
+
+
+if __name__ == '__main__':
+    main()
