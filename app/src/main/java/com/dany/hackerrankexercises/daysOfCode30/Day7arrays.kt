@@ -50,7 +50,7 @@ fun reverseArray(arr: Array<Int>) {
 }
 
 fun printArray(size: Int, arr: Array<Int>) {
-    for (i in 0..size - 1) {
+    for (i in 0 until size) {
         print("${arr[i]} ")
     }
 }
