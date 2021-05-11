@@ -1,0 +1,12 @@
+def array_reverse(arr):
+    reverse = (arr[::-1])
+    for i in reverse:
+        array = "{}".format(i)
+        print(array, end=" ")
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    array_reverse(arr)
