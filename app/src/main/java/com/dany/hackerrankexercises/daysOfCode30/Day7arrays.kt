@@ -35,6 +35,7 @@ fun main(args: Array<String>) {
 
 fun reverseArray(arr: Array<Int>) {
 
+    val n = arr.size
     var temp: Int
     var start = 0
     var end: Int = n - 1
@@ -49,7 +50,7 @@ fun reverseArray(arr: Array<Int>) {
 }
 
 fun printArray(size: Int, arr: Array<Int>) {
-    for (i in 0 until size) {
+    for (i in 0..size - 1) {
         print("${arr[i]} ")
     }
 }
